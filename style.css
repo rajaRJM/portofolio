@@ -3,30 +3,37 @@
 }
 
 body {
-
-    margin: 0;
+    font-family: 'Quicksand', sans-serif;
     padding: 0;
-
+    margin: 0;
 }
 
-h2, h3 {
-    color: #00a2cb;
-}
-
-footer {
-    padding: 20px;
-    color: white;
-    background-color: #00a2cb;
+.jumbotron {
     text-align: center;
-    font-weight: bold;
+    padding: 50px;
+    background-color: antiquewhite;
+}
+nav {
+    background-color: aqua;
+    padding: 5px;
+
+    position: sticky;
+    top: 0;
 }
 
+nav ul {
+    display: flex;
+    padding-inline: 4rem;
+    gap: 2rem;
+}
+
+nav li {
+   list-style: none;
+}
 
 nav a {
-    font-size: 20px;
-    font-weight: 400;
     text-decoration: none;
-
+    font-size: 20px;
     color: white;
 }
 
@@ -34,54 +41,42 @@ nav a:hover {
     font-weight: bold;
 }
 
-
-.profile header {
-    text-align: center;
-}
-
-.featured-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    object-position: center;
+h2, h3 {
+    color: aqua;
 }
 
 .profile img {
     width: 200px;
 }
 
+.profile header {
+    text-align: center;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 15px;
 
-    padding: 20px;
+    padding: 10px;
 }
 
-.jumbotron {
-    font-size: 20px;
-    padding: 60px;
-    background-color: #00c8eb;
-    text-align: center;
-    color: white;
+.featured-image{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
 }
 
-nav ul {
-    padding-inline: 4rem;
+#content {
+    flex: 5;
     display: flex;
 
-    gap: 2rem;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
 }
 
-nav li {
-    list-style: none;
-}
-
-nav {
-    background-color: #00a2cb;
-    padding: 5px;
-
-    position: sticky;
-    top: 0;
+aside {
+    flex: 1;
 }
 
 main {
@@ -91,30 +86,12 @@ main {
     gap: 1.5rem;
 }
 
-#content {
-    flex: 5;
-
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem 2rem;
-}
-
-aside {
-    flex: 1;
+footer {
+    padding: 20px;
+    background-color: aqua;
+    text-align: center;
 }
 
 header {
     display: inline;
-}
-
-/* Perangkat dengan lebar layar 1200px dan di bawahnya */
-@media screen and (max-width: 1200px) {
-    main {
-        flex-flow: column nowrap;
-    }
-
-    main aside {
-        align-self: center;
-    }
-
 }
